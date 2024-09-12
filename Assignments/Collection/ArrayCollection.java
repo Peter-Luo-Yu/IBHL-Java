@@ -13,7 +13,7 @@ public class ArrayCollection<E> implements Collection<E>
     
     public ArrayCollection()
     {
-        internalList = new ArrayList<E>();
+        internalList = new ArrayList<>();
         currentElement = 0;
     }
 
@@ -22,8 +22,8 @@ public class ArrayCollection<E> implements Collection<E>
     }
 
     public E getNext() {
-        currentElement++;
-        return internalList.get(currentElement--);
+        int temp = currentElement++;
+        return internalList.get(temp);
     }
     
     public void resetNext() {
@@ -31,7 +31,11 @@ public class ArrayCollection<E> implements Collection<E>
     }
 
     public boolean hasNext() {
-        return currentElement >= internalList.size();   
+        if (currentElement + 1 < internalList.size()){
+            currentElement++;
+            return true;   
+        }
+        return false;
     }
 
     public boolean isEmpty() {

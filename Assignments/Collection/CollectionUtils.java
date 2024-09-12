@@ -14,7 +14,7 @@
 public class CollectionUtils
 {
     //If the Collection contains Comparable Elements, then this metbhod will return the minimum element in the collection
-    public static <E extends Comparable> E minimum(Collection<E> collection)
+    public static <E extends Comparable<E>> E minimum(Collection<E> collection)
     {
         E min = collection.getNext();
         while (collection.hasNext())
@@ -27,7 +27,7 @@ public class CollectionUtils
         return min;
     }
     
-    public static <E extends Comparable> E maximum(Collection<E> collection)
+    public static <E extends Comparable<E>> E maximum(Collection<E> collection)
     {
         E min = collection.getNext();
         while (collection.hasNext())

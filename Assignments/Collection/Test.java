@@ -7,7 +7,7 @@
  */
 public class Test
 {
-    public static void main(String args)
+    public static void main(String[] args)
     {
         int[] testValues = {10, -4, 18, 36, 54, 12};
         Collection<Integer> c = new ArrayCollection<Integer>();
