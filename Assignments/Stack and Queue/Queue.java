@@ -8,4 +8,5 @@ public interface Queue<E>
     E peekFront( ); //returns object at the front of the list
     int size(); //returns the number of elements in the queue
     void clear(); //clears all elements from the Queue.  Results in an empty queue.
+    String toString();
 }
