@@ -11,6 +11,15 @@ public class Test{
         list.add(10,100);
         System.out.println("Added 100 to index 10: " + list);
         
+        list.add(11,120);
+        list.add(12,200);
+
+        try{
+        list.add(14,400);
+        }
+        catch(Exception e){
+        System.out.println("does it throw exception." + e );}
+
         list.remove(4);
         System.out.println("Removed 4th element: " + list);
 
